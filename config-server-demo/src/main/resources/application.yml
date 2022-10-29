@@ -1,0 +1,18 @@
+server:
+  port: 7000
+
+spring:
+  banner:
+    location: classpath:banner/banner.txt
+    image:
+     location: classpath:fotocreador/egardengo.jpeg
+  application:
+    name: config-server-demo
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          uri: https://github.com/EGardenGO/config-server-demo
+          #uri: https://github.com/NTTData-Bootcamp-Microservicios/semana4-config-server
+          search-paths: config-data
